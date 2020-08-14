@@ -1,0 +1,23 @@
+{
+  "name": "webpack-demo-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/farahsaleem1995/webpack-demo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/farahsaleem1995/webpack-demo/issues"
+  },
+  "homepage": "https://github.com/farahsaleem1995/webpack-demo#readme",
+  "devDependencies": {
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
+  }
+}
