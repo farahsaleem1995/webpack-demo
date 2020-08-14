@@ -10,8 +10,8 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.css$/,
-        loader: ["style-loader", "css-loader"],
+        test: /\.(sa|sc|c)ss$/,
+        loader: ["style-loader", "css-loader", "sass-loader"],
       },
     ],
   },
