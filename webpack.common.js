@@ -1,5 +1,6 @@
-const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
   entry: "./src/index.js",
@@ -9,12 +10,27 @@ module.exports = {
       filename: "index.html",
       favicon: "./src/assets/favicon.ico",
     }),
+    new CleanWebpackPlugin(),
   ],
   module: {
     rules: [
       {
         test: /\.(sa|sc|c)ss$/,
-        loader: ["style-loader", "css-loader", "sass-loader"],
+        use: ["style-loader", "css-loader", "sass-loader"],
+      },
+      {
+        test: /\.html$/,
+        use: ["html-loader"],
+      },
+      {
+        test: /\.(png|jpg|svg|gif)$/,
+        use: {
+          loader: "file-loader",
+          options: {
+            name: "[name].[hash].[ext]",
+            outputPath: "img",
+          },
+        },
       },
     ],
   },

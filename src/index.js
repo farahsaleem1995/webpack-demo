@@ -8,3 +8,5 @@ const alertService = new AlertService();
 const componentService = new ComponentService();
 
 app(alertService, componentService);
+
+console.log("hi");
